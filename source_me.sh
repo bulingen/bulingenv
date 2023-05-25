@@ -1,6 +1,7 @@
 source helpme.sh
 
-addHelp "doStuff" "prints help texts" "addHelp \"command\" \"description\" \"usage\""
-function doStuff {
+addHelp "macsetup" "sets up env on mac" "macsetup"
+function macsetup {
     echo "korv"
+    echo "bajs"
 }
