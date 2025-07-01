@@ -10,12 +10,16 @@ helpme() {
   elif [[ "$1" == "2" ]]; then
     print_aws_vault_help
     return 0
+  elif [[ "$1" == "3" ]]; then
+    print_aws_vault_agnoster_help
+    return 0
   fi
   echo "Select an option:"
   echo "1) Add this to zshrc"
   echo "2) AWS vault aliases (session and chrome window)"
-  echo "3) Exit"
-  printf "Enter choice [1-3]: "
+  echo "3) aws-vault session in agnoster theme"
+  echo "4) Exit"
+  printf "Enter choice [1-4]: "
   read choice
 
   case $choice in
@@ -26,6 +30,9 @@ helpme() {
       print_aws_vault_help
       ;;
     3)
+      print_aws_vault_agnoster_help
+      ;;
+    4)
       return 0
       ;;
     *)
