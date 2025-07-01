@@ -24,7 +24,7 @@ awslogin() {
   fi
 
   # Open the URL in Chrome with the given profile directory
-  google-chrome --new-window --profile-directory="$profile" "$url" >/dev/null 2>&1 &
+  google-chrome --profile-directory="$profile" "$url" >/dev/null 2>&1 &
 }
 
 awsexec() {
