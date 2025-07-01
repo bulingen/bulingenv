@@ -3,6 +3,5 @@
 ## Get started
 
 ```bash
-chmod +x menu.sh
-./menu.sh
+./source_me.sh
 ```
