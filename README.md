@@ -3,6 +3,5 @@
 ## Get started
 
 ```bash
-source source_me.sh
-helpme
+./source_me.sh
 ```
