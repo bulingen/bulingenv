@@ -1,5 +1,8 @@
 # Source this file to load all helper functions and commands
-for file in $(find "$(dirname "$BASH_SOURCE")/scripts" -type f -name '[0-9]-*.sh' | sort); do
+# Determine the directory of this script, even if sourced from elsewhere
+SOURCE_ME_DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-${(%):-%N}}")" && pwd)"
+
+for file in $(find "$SOURCE_ME_DIR/scripts" -type f -name '[0-9]-*.sh' | sort); do
   source "$file"
 done
 
