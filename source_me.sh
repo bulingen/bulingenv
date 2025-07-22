@@ -43,3 +43,6 @@ helpme() {
       ;;
   esac
 }
+
+# To hide user@host
+DEFAULT_USER=`whoami`

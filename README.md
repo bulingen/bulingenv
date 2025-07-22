@@ -3,7 +3,7 @@
 ## Get started
 
 ```bash
-./source_me.sh
+source ./source_me.sh
 ```
 
 ## TODO:
