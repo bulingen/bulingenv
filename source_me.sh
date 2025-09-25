@@ -11,18 +11,23 @@ helpme() {
     print_add_to_zshrc_help
     return 0
   elif [[ "$1" == "2" ]]; then
-    print_aws_vault_help
+    print_aws_vault_install_help
     return 0
   elif [[ "$1" == "3" ]]; then
+    print_aws_vault_help
+    return 0
+  elif [[ "$1" == "4" ]]; then
     print_aws_vault_agnoster_help
     return 0
   fi
+
   echo "Select an option:"
   echo "1) Add this to zshrc"
-  echo "2) AWS vault aliases (session and chrome window)"
-  echo "3) aws-vault session in agnoster theme"
-  echo "4) Exit"
-  printf "Enter choice [1-4]: "
+  echo "2) Help with installing aws-vault"
+  echo "3) AWS vault aliases (session and chrome window)"
+  echo "4) aws-vault session in agnoster theme"
+  echo "5) Exit"
+  printf "Enter choice [1-5]: "
   read choice
 
   case $choice in
@@ -30,12 +35,15 @@ helpme() {
       print_add_to_zshrc_help
       ;;
     2)
-      print_aws_vault_help
+      print_aws_vault_install_help
       ;;
     3)
-      print_aws_vault_agnoster_help
+      print_aws_vault_help
       ;;
     4)
+      print_aws_vault_agnoster_help
+      ;;
+    5)
       return 0
       ;;
     *)
